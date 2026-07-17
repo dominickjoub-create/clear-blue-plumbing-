@@ -97,7 +97,7 @@ export function Hero() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-aqua" />
               </span>
               <span className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-chalk-dim">
-                Burst pipe? We respond fast
+                On standby for emergencies
               </span>
             </span>
 

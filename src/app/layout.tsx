@@ -108,12 +108,28 @@ const jsonLd = {
   description: site.description,
   slogan: site.tagline,
   areaServed: site.areaServed,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.address.street,
+    addressLocality: `${site.address.suburb}, ${site.address.city}`,
+    postalCode: site.address.postalCode,
+    addressRegion: "Gauteng",
+    addressCountry: "ZA",
+  },
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: site.rating.value,
     reviewCount: site.rating.count,
     bestRating: "5",
   },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "17:00",
+    },
+  ],
   priceRange: "$$",
   makesOffer: services.map((s) => ({
     "@type": "Offer",

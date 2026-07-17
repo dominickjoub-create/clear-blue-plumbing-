@@ -8,44 +8,42 @@ export const site = {
   shortName: "Clear Blue Plumbing",
   tagline: "Clear solutions. Blue reliability. Flowing trust.",
   description:
-    "Trusted local plumber for leak detection, burst geysers, pipes, taps, toilets, drains and sewers. Fast, friendly, honest workmanship from Brandon and the Clear Blue Plumbing team. Rated 5.0 on Google.",
+    "Trusted plumber in Roodepoort (Witpoortjie & the West Rand) for leak detection, burst geysers, pipes, taps, toilets, drains and sewers. Fast, friendly, honest workmanship from Brandon and the Clear Blue Plumbing team. Rated 5.0 from 38 Google reviews.",
 
   // Change this to the live domain when it goes live.
   url: "https://clearblueplumbing.co.za",
 
   // Contact — used for tel:, mailto: and WhatsApp deep links.
-  // TODO: replace the placeholder phone / WhatsApp with the real numbers.
-  phoneDisplay: "061 000 0000", // PLACEHOLDER — update with real number
-  phoneE164: "+27610000000", // PLACEHOLDER — update with real number
-  whatsapp: "27610000000", // PLACEHOLDER — wa.me format (no +, no spaces)
+  phoneDisplay: "072 426 0645",
+  phoneE164: "+27724260645",
+  whatsapp: "27724260645", // wa.me format (no +, no spaces)
   email: "dominickjoub@gmail.com",
   facebook: "https://www.facebook.com/",
 
   // Physical address — shown in the contact section and used for local SEO.
-  // Clear Blue serves a trading area rather than a walk-in shopfront.
   address: {
-    street: "",
-    suburb: "",
-    city: "",
-    postalCode: "",
-    display: "Your area & nearby suburbs", // PLACEHOLDER — update service area
+    street: "13 Moller St",
+    suburb: "Witpoortjie",
+    city: "Roodepoort",
+    postalCode: "1724",
+    display: "13 Moller St, Witpoortjie, Roodepoort",
     mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Clear+Blue+Plumbing",
+      "https://www.google.com/maps/search/?api=1&query=Clear+Blue+Plumbing+13+Moller+St+Witpoortjie+Roodepoort",
   },
 
   // Google Business profile rating.
   rating: {
     value: "5.0",
-    count: 6,
+    count: 38,
   },
 
   // Trading area — helps local SEO. Adjust as needed.
-  areaServed: "Your area & nearby suburbs", // PLACEHOLDER — update service area
+  areaServed: "Roodepoort & the West Rand",
   region: "ZA",
 
   hours: {
-    label: "Open 7 days a week",
-    note: "Emergency call-outs for burst pipes & geysers",
+    label: "Mon–Fri · 8am–5pm",
+    note: "On standby after-hours for burst pipes & geyser emergencies",
   },
 
   offer: {

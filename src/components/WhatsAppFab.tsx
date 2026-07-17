@@ -33,7 +33,7 @@ export function WhatsAppFab() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className={`fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-aqua text-white shadow-aqua transition-all duration-300 ${
+      className={`fixed bottom-5 right-5 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-aqua text-white shadow-aqua transition-all duration-300 sm:flex ${
         show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0"
       }`}
     >

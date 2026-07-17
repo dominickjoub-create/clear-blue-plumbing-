@@ -7,6 +7,7 @@ import { QuoteForm } from "@/components/QuoteForm";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
+import { MobileActionBar } from "@/components/MobileActionBar";
 
 export default function Home() {
   return (
@@ -16,12 +17,13 @@ export default function Home() {
         <Hero />
         <WhyChooseUs />
         <Services />
-        <Testimonials />
         <QuoteForm />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />
       <WhatsAppFab />
+      <MobileActionBar />
     </>
   );
 }
