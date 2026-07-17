@@ -14,15 +14,6 @@ const PIPE =
 export function PipeDrip() {
   return (
     <div className="pointer-events-none absolute inset-y-0 right-0 w-full opacity-45 sm:w-[70%] sm:opacity-100">
-      {/* fade the pipe out toward the left so hero text stays readable */}
-      <div
-        aria-hidden
-        className="absolute inset-0 z-10"
-        style={{
-          background:
-            "linear-gradient(to right, #050A14 0%, rgba(5,10,20,0.65) 22%, transparent 55%)",
-        }}
-      />
       <svg
         viewBox="0 0 640 640"
         preserveAspectRatio="xMidYMid slice"
