@@ -86,6 +86,14 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   category: "business",
+  manifest: "/manifest.webmanifest",
+  // Mobile-first: proper home-screen app behaviour on iOS/Android.
+  appleWebApp: {
+    capable: true,
+    title: site.shortName,
+    statusBarStyle: "black-translucent",
+  },
+  formatDetection: { telephone: true, address: true },
 };
 
 export const viewport: Viewport = {

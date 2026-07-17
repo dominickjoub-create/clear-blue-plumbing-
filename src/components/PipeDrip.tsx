@@ -13,7 +13,7 @@ const PIPE =
 
 export function PipeDrip() {
   return (
-    <div className="pointer-events-none absolute inset-y-0 right-0 w-full opacity-45 sm:w-[70%] sm:opacity-100">
+    <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[70%] sm:block">
       <svg
         viewBox="0 0 640 640"
         preserveAspectRatio="xMidYMid slice"
