@@ -1,39 +1,21 @@
 import { site } from "@/lib/site";
 
 /**
- * The Clear Blue Plumbing brand mark — a water droplet holding a pipe/wrench,
- * shown as a rounded tile so it sits cleanly on the dark UI. Uses the supplied
- * logo image when present (public/logo-mark.png); otherwise the inline SVG
- * droplet below stands in.
+ * The Clear Blue Plumbing brand mark — the droplet + pipe/wrench emblem from the
+ * official logo, cropped out of the full lock-up and shown on a rounded white
+ * tile so it sits cleanly on the dark UI.
  */
 export function LogoMark({ className = "" }: { className?: string }) {
   return (
     <span
-      className={`grid place-content-center rounded-lg bg-white ring-1 ring-ink-line ${className}`}
-      aria-hidden
+      className={`grid place-content-center overflow-hidden rounded-lg bg-white ring-1 ring-ink-line ${className}`}
     >
-      <svg viewBox="0 0 48 48" className="h-[70%] w-[70%]" fill="none">
-        {/* Droplet outline */}
-        <path
-          d="M24 5C24 5 10 20 10 30a14 14 0 0 0 28 0C38 20 24 5 24 5Z"
-          fill="url(#cbpDrop)"
-        />
-        {/* Simple pipe elbow inside the drop */}
-        <path
-          d="M20 34V25a5 5 0 0 1 5-5h5"
-          stroke="#0B1220"
-          strokeWidth="3.4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <rect x="28.5" y="17.5" width="5.5" height="5" rx="1" fill="#0B1220" />
-        <defs>
-          <linearGradient id="cbpDrop" x1="10" y1="5" x2="38" y2="44" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#4FA9F5" />
-            <stop offset="1" stopColor="#0C5FC0" />
-          </linearGradient>
-        </defs>
-      </svg>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/logo-mark.png"
+        alt={`${site.name} logo`}
+        className="h-full w-full object-contain p-1"
+      />
     </span>
   );
 }
