@@ -1,11 +1,8 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { motion, useReducedMotion } from "framer-motion";
 import { site } from "@/lib/site";
-
-// Client-only, code-split so the 3D engine never touches SSR or first paint.
-const DropletField = dynamic(() => import("./DropletField"), { ssr: false });
+import { PipeDrip } from "./PipeDrip";
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -28,9 +25,7 @@ export function Hero() {
             "radial-gradient(60% 50% at 50% 0%, rgba(30, 134, 232,0.12), transparent 70%), radial-gradient(50% 60% at 85% 30%, rgba(30, 134, 232,0.07), transparent 70%)",
         }}
       />
-      <div className="absolute inset-0">
-        <DropletField />
-      </div>
+      <PipeDrip />
       {/* Fade the field into the page bottom */}
       <div
         className="pointer-events-none absolute inset-x-0 bottom-0 h-40"

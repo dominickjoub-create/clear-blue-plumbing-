@@ -120,6 +120,59 @@
   }
 }
 
+/* ---- Hero pipe: dripping water animations ---- */
+.cbp-fb {
+  transform-box: fill-box;
+  transform-origin: center top;
+}
+
+/* A drip from the compression nut: forms, hangs, sags, then falls to the pool. */
+@keyframes cbp-drip-left {
+  0% { transform: translateY(0) scaleY(0.6); opacity: 0; }
+  7% { transform: translateY(0) scaleY(1); opacity: 0.9; }
+  26% { transform: translateY(7px) scaleY(1.15); opacity: 0.95; }
+  34% { transform: translateY(13px) scaleY(1.35); opacity: 0.95; }
+  88% { opacity: 0.9; }
+  100% { transform: translateY(332px) scaleY(1.7); opacity: 0; }
+}
+.cbp-drip-left {
+  animation: cbp-drip-left 3.3s cubic-bezier(0.45, 0, 0.9, 1) infinite;
+}
+
+/* A shorter drip from the bottom of the U-bend. */
+@keyframes cbp-drip-u {
+  0% { transform: translateY(0) scaleY(0.6); opacity: 0; }
+  8% { transform: translateY(0) scaleY(1); opacity: 0.9; }
+  30% { transform: translateY(6px) scaleY(1.15); opacity: 0.95; }
+  40% { transform: translateY(11px) scaleY(1.3); opacity: 0.95; }
+  88% { opacity: 0.9; }
+  100% { transform: translateY(160px) scaleY(1.6); opacity: 0; }
+}
+.cbp-drip-u {
+  animation: cbp-drip-u 3.3s cubic-bezier(0.45, 0, 0.9, 1) infinite;
+}
+
+/* Expanding ripple ring on the pool surface. */
+@keyframes cbp-ripple {
+  0% { transform: scale(0.2); opacity: 0; }
+  12% { opacity: 0.55; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+.cbp-ripple {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: cbp-ripple 3.3s ease-out infinite;
+}
+
+/* Slow chrome glint travelling along the pipe. */
+.cbp-sheen {
+  stroke-dasharray: 46 1200;
+  animation: cbp-sheen 6.5s linear infinite;
+}
+@keyframes cbp-sheen {
+  to { stroke-dashoffset: -1246; }
+}
+
 /* Thin, on-brand scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
