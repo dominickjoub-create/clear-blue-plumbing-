@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #050A14;
+  --aqua: #1E86E8;
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    @apply bg-ink text-chalk font-sans antialiased;
+    background-color: #050A14;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #1E86E8;
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #1E86E8;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  /* Layout container */
+  .shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  /* Small uppercase technical label */
+  .eyebrow {
+    @apply font-mono text-[0.7rem] uppercase tracking-[0.22em] text-aqua;
+  }
+
+  /* The signature clear-blue button */
+  .btn-aqua {
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full
+           bg-aqua px-6 py-3.5 font-display text-[0.95rem] font-bold uppercase tracking-wide
+           text-white transition-transform duration-200 will-change-transform
+           hover:-translate-y-0.5 active:translate-y-0;
+    box-shadow: 0 10px 30px -10px rgba(30, 134, 232, 0.6);
+  }
+  .btn-aqua::after {
+    content: "";
+    @apply absolute inset-0 -translate-x-full;
+    background: linear-gradient(
+      100deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.55) 50%,
+      transparent 80%
+    );
+  }
+  .btn-aqua:hover::after {
+    @apply animate-sweep;
+  }
+
+  /* Ghost / secondary button */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink-line
+           bg-ink-raise/60 px-6 py-3.5 font-display text-[0.95rem] font-bold uppercase
+           tracking-wide text-chalk backdrop-blur transition-colors duration-200
+           hover:border-aqua/60 hover:text-aqua;
+  }
+
+  /* Hairline divider */
+  .rule-aqua {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-ink-line to-transparent;
+  }
+
+  /* Frosted panel used across cards + form */
+  .panel {
+    @apply rounded-xl2 border border-ink-line bg-ink-soft/80 backdrop-blur-sm;
+  }
+
+  /* Faint water-line grid texture used behind sections */
+  .grid-veil {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 46px 46px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+  }
+}
+
+/* Thin, on-brand scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #050A14;
+}
+::-webkit-scrollbar-thumb {
+  background: #202C42;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2f3d5a;
+}
